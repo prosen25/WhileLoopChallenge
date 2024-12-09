@@ -6,12 +6,22 @@ public class Main {
         // to see how IntelliJ IDEA suggests fixing it.
         int startNumber = 5;
         int endNumber = 20;
+        int evenNumberCounter = 0;
+        int oddNumberCounter = 0;
         while (startNumber <= endNumber) {
             if (isEvenNumber(startNumber)){
                 System.out.println(startNumber);
+                evenNumberCounter++;
+            } else {
+                oddNumberCounter++;
+            }
+            if (evenNumberCounter == 5) {
+                break;
             }
             startNumber++;
         }
+
+        System.out.println(evenNumberCounter + " even number found and " + oddNumberCounter + " odd number found.");
     }
 
     public static boolean isEvenNumber(int number) {
